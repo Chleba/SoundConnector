@@ -63,7 +63,7 @@ ConnectSoundFiles.prototype.makeSoxArguments = function(){
 		var call = '"| ./sox '+file+' -c 1 -r 4410 -p pad 0 0.1" '
 		mainCall += call;
 	}
-	mainCall += '-t wav -C 32 '+this.path+''+this.templateFileName+'.wav';
+	mainCall += '-t mp3 -C 32 '+this.path+''+this.templateFileName+'.mp3';
 	console.log(mainCall);
 	exec(mainCall, this.soxExec.bind(this));
 };
